@@ -1,0 +1,93 @@
+obs pt ppt:
+ 
+1) e bine sa merg pe fundal alb
+2) idei principale, cuvinte, nu mult text
+3) idei principale, cuvinte cheie, desene, scheme; NU propozitii!!!
+4) nu pun poze cu watermark-uri!!!
+
+Eu voi vorbi despre clasele de adrese IP private.
+
+Pana sa vorbesc despre ce sunt 
+In primul rand, vreau sa amintesc rapid 2 lucruri esentiale pana sa intru in subiectul meu.
+
+1) In primul rand, "IP" vine de la "Internet protocol" si reprezinta modul in care
+identificam in mod unic fiecare calculator, fiecare device in retea. 
+
+//In acelasi timp, prin acest IP se 
+2) Apoi, comunicarea intre device-uri este permisa prin acest protocol.
+
+Trecand mai departe, 
+IP-ul este un protocol pe 32 biti, deci poate avea 2^32 valori ( aprox 4,2 miliarde
+adrese )
+
+Intrebarea care apare este: Ne ajung aceste 4,2 miliarde de adrese pentru toate dispozitivele
+care am vrea sa le conectam in retea?
+
+Ei bine raspusul este NU. Acestea au fost deja epuizate. Prin 2012-2013 a fost anuntat
+si oficial acest fapt. 
+Mai tarziu, in 2016 existau aproximativ 30 miliarde dispozitive conectate la Internet,
+deci toata treaba cu Internet of Things e intr-o crestere rapida.
+Ca urmare a acestui lucru, niste ingineri au propus standardul IPv6, un standard pe 128 biti.
+Momentan, voi vorbi doar de clasele IP pe 32 biti.
+
+Trecand, mai departe
+
+Exista 5 clase de IP-uri.
+
+-> A, B, C - folosite
+-> D - Multicast
+-> E - Experimental
+
+Dintre aceste 5 clase, primele 3 sunt folosite.
+
+Ultima este experimentala - deci folosita doar in scop de testare; nu vom gasi in 
+Internet astfel de adrese IP, care sa inceapa cu 240 pana la 255.
+
+Iar clasa D este folosita pentru adresarea Multicast. 
+Ce inseamna Multicast? Inseamna ca: daca am o sala cu 5 oameni, eu ma aflu in acea sala,
+eu vorbesc catre un grup specific de oameni; deci, desi intr o cladire pot fi 100 de oameni,
+eu voi vorbi doar cu acest grup de 5 persoane.
+
+Revenind la primele 3 clase:
+----------------------------
+Avem 2 tipuri de adrese IP: publice si private.
+
+!!! + mai intai definitia aici!!!
+
+Ce sunt adresele ip private?
+
+Adresele private sunt acele adrese care nu sunt "direcționate" - sa spun asa pe Internet și 
+carora nu le poate fi trimis niciun trafic de pe Internet, ci funcționează doar în rețeaua
+locală.
+
+De ce avem nevoie de adrese IP publice si de ce avem nevoie de adrese IP private?
+
+Numarul de adrese IP este mult mai mic decat numarul total de dispozitive pe care dorim sa
+le conectam la Internet. Asadar, cei care au definit standardul IP, au venit cu ideea evidenta: 
+de a face cumva sa putem avea simultan miliarde de echipamente care comunica in Internet. 
+Ei bine, acest lucru il putem realiza cu ajutorul adreselor IP private.
+
+Fiecare din noi avem acasa un router wireless. Ei bine, in acel router wireless avem si o 
+retea locala, a noastra. Acea retea locala va avea o adresa IP privata. Adresele ip private
+sunt folosite de fiecare END-USER in parte, in retelele locale respective, spre deosebire
+de retelele publice pentru care exista o autoritate 
+
+Atentie! Acestea nu au acces in Internet. Adresele IP publice sunt adresele Ip care sunt
+accesibile din Internet. In teorie, nimeni nu poate sa intre in reteaua ta pe IP ul tau privat
+
+... - range uri ip-uri private - ...
+
+daca aveti windows si deschideti un cmd si scrieti ipconfig, o sa va apara si voua o adresa
+ip privata in dreptul "IPv4" care se incadreaza in una din clasele A, B sau C.
+
+Aceste adrese ip private le avem noi in retelele noastre locale si ele nu pot sa ajunga in
+Internet, deci ele nu pot sa treaca de routerul nostru sa ajunga in Internet. In cazul in
+care 
+
+Daca ele nu pot ajunge in Internet, asta inseamna ca fiecare persoana poate sa le
+foloseasca in mod privat. Asadar fiecare persoana poate sa vina sa isi aloce orice adresa ip
+doreste din acest range.
+
+De exemplu, un ip - de exemplu - 131.89.12.5 l-am putea pune in reteaua noastra privata
+
+Stim deja ca fiecare device are un IP unic prin care va putea comunica

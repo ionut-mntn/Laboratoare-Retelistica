@@ -1,0 +1,2 @@
+in primul rand o sa avem nevoie de libraria pentru socket-uri, evident. Din cate am inteles, un socket e ca o
+cutie postala. Pana sa ajung la s

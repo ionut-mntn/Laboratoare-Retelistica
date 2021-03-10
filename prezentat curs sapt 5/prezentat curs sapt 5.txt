@@ -1,0 +1,115 @@
+
+CLASE IP PRIVATE / FALSE
+------------------------
+1) Care sunt ele?
+2) De ce?
+3) Cand se folosesc?
+
+De ce?
+-----
+Din păcate, această metodă risipea multe adrese IP, iar odată cu răspândirea Internetului a apărut pericolul epuizării spațiului de adrese. Pentru a soluționa această problemă, la începutul anilor '90 au fost concepute mai multe soluții:
+adrese private
+CIDR
+VLSM
+
+
+-slide 1: slide start-
+============================================================================================
+Eu voi vorbi putin despre clase de adrese IP private.
+
+-slide 2-
+============================================================================================
+O adresă IP privată este o adresă IP rezervată pentru uz intern în spatele unui router sau 
+al unui alt dispozitiv de traducere a adresei de rețea (Network Adress Translation), deci 
+undeva -sa zic asa- ferit de ochiul public.
+
+Catre acestea nu poate fi trimis trafic de pe Internet, ci functioneaza doar in reteaua
+locala.
+
+Adresele IP private exista în contrast cu adresele IP publice, care 
+- evident, numele o zice - sunt publice și nu pot fi  utilizate într-o rețea de domiciliu, 
+business etc. Adresele IP private se mai numesc și adrese IP locale.
+
+Pentru a numi adresele IP private, voi face mai intai precizarea ca adresele IP de tip IPv4
+(adica pe standardul de 32 biti) se impart in urmatoarele 5 clase: 
+============================================================================================
+
+
+-slide 3-
+============================================================================================
+Dintre aceste 5 clase cu cele 5 "raze de operare" care apar aici, doar primele 3 
+sunt folosite.
+
+Clasa D este folosita pentru adresarea Multicast, adica -in termeni simpli- pentru 
+transmiterea aceluiasi mesaj de la un dispozitiv catre mai multe dispozitive din retea.
+
+Ultima este experimentala - deci folosita doar in scop de testare; nu vom gasi in 
+Internet astfel de adrese IP, care sa inceapa cu 240 pana la 255.
+============================================================================================
+
+
+-slide 4-
+============================================================================================
+Din primele 3 clase de adrese IP folosite, IANA ( The Internet Assigned Numbers Authority )
+rezerva urmatoarele  blocuri de adrese IP pentru a fi utilizate ca adrese IP private:
+
+Hardware-ul dintr-o anumită rețea care utilizează o adresă IP privată poate comunica cu toate 
+celelalte componente hardware din limitele acelei rețele, dar necesită un router pentru a 
+comunica cu dispozitivele din afara rețelei; adică de la router înspre Internet, adresa IP publică va
+fi utilizată pentru comunicare.
+
+============================================================================================
+
+
+-slide 5-
+DE CE AVEM NEVOIE DE ELE?
+============================================================================================
+
+Numarul de adrese IP este mult mai mic decat numarul total de dispozitive pe care dorim sa
+le conectam la Internet. Asadar, cei care au definit standardul IP, au trebuit sa gaseasca o
+solutie pentru a face cumva sa putem avea simultan miliarde de echipamente care comunica in 
+Internet. 
+Acest lucru il putem realiza cu ajutorul adreselor IP private.
+
+In loc sa avem intr-o casa sau intr-o corporatie dispozitive
+care folosesc individual cate o adresa ip publica - despre care stim ca dispunem de
+un numar limitat de astfel de adrese - ei bine, putem opta pentru adresa privata, care pune
+la dispozitie un intreg set separat de adrese care permit accesul la o retea, dar fara sa 
+ocupe o adresa IP publica.
+
+
+-slide 6-
+============================================================================================
+De exemplu, majoritatea routerelor din case și companii din întreaga lume au adresa IP 
+192.168.1.1 și atribuie adresele 192.168.1.2, 192.168.1.3, ... diferitelor dispozitive care se 
+conectează la acestea.
+
+Nu contează câte routere utilizează adresa 192.168.1.1 sau câte zeci sau sute de dispozitive 
+din interiorul acelei rețele au aceleasi adrese IP cu utilizatorii altor rețele, deoarece 
+intre aceste retele nu exista comunicare directa.
+
+Adresele IP private oferă, de asemenea, o modalitate prin care dispozitivele care nu au 
+nevoie de o conexiune la internet, precum servere de fișiere și imprimante, să comunice cu 
+celelalte dispozitive dintr-o rețea fără a fi expuse direct publicului.
+
+
+-slide 7-
+============================================================================================
+
+Organizatiile care “administreaza” Internetul au propus, prin conventie, ca adresele IP Private 
+sa nu poata fi "rutate" in Internet (orice pachet de date cu IP-ul sursa Privat va fi aruncat !).
+
+Astfel toate companiile furnizoare de servicii de Internet au implementat politici de 
+filtrare a traficului (ACL) pe baza IP-ului sursa; acestea verifica daca un pachet are un IP 
+privat sau nu. In cazul in care, IP-ul sursa este privat (adica dupa cum am mai spus, incepe
+cu: 10…, 172.16… sau 192.168…) atunci acesta va fi oprit si “aruncat la gunoi”, transportarea 
+lui catre destinatie nefiind permisa.
+
+-slide 8-
+Cum imi gasesc adresa mea privata IP?
+============================================================================================
+Daca doriti sa vedeti care este adresa voastra privata, trebuie sa deschideti linia de comanda
+si aveti aici comenzile pe care sa le tastati: ipconfig pt windows, respectiv 
+ifconfig pt unix. O sa va apara mai multe detalii, printre care si adresa IP privata.
+
+-slide 9-

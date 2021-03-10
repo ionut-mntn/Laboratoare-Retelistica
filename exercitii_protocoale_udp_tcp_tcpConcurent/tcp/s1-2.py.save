@@ -1,0 +1,15 @@
+#tcp = bind cu listen; apoi accept si close
+
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#s.bind(("127.0.0.1", 7777)) # bind tot pe 0.0.0.0 !!
+s.bind(("0.0.0.0", 7777))
+s.listen(5)
+client_socket, addr = s.accept()
+
+buff = client_socket.recv(10)
+
+print "Am primit de la client:", buff
+
+client_socket.send(str(len(buff)))
